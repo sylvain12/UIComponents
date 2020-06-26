@@ -135,6 +135,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   flex-direction: column;
 }
 
+/* NAVIGATION */
+
 .nav {
   margin-bottom: 3rem;
 }
@@ -143,7 +145,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
 }
 
-.nav-item + .nav-item {
+.nav-menu .nav-item + .nav-item {
   margin-left: 2rem;
 }
 
@@ -156,6 +158,80 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: var(--pr-clr);
   font-weight: 600;
 }
+
+.nav-bobile {
+  display: none;
+}
+
+.nav-menu-mobile {
+  display: none;
+  margin-top: 2rem;
+  transition: all 0.2s;
+}
+
+.nav-menu-mobile .nav-link {
+  display: inline-block;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.nav-menu-mobile .nav-link:hover {
+  background-color: var(--bg-light-clr);
+}
+
+.nav-menu-mobile .nav-link.active {
+  background-color: var(--pr-clr);
+  color: var(--text-clr);
+}
+/* END NAVIGATION */
+
+/* NAVIGATION HUMBERGER */
+.humberger {
+  position: relative;
+  display: inline-block;
+  cursor: inherit;
+  width: 5rem;
+  transition: all 0.2s;
+}
+
+label[for="humberger-menu"] {
+  cursor: pointer;
+}
+
+.humberger,
+.humberger::after,
+.humberger::before {
+  background: var(--pr-clr);
+  height: 4px;
+  border-radius: 2px;
+}
+
+.humberger::before,
+.humberger::after {
+  content: "";
+  width: 5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.humberger::before {
+  top: -1rem;
+}
+
+.humberger::after {
+  bottom: -1rem;
+}
+
+#humberger-menu {
+  display: none;
+}
+
+#humberger-menu:checked ~ .nav-menu-mobile {
+  display: block;
+}
+
+/* END NAVIGATION HUMBERGER */
 
 .breadcumb {
   display: flex;
@@ -248,5 +324,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .tab + .tab {
     margin-top: 2rem;
     margin-left: 0;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-bobile {
+    display: block;
   }
 }
