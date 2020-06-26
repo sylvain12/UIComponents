@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Insights</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/12c30f3471.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__user">
+          <img
+            src="images/profile.jpg"
+            alt="User profile"
+            width="100px"
+            height="100px"
+          />
+          <div class="header__user-info">
+            <h2>Leo Bailey</h2>
+            <small>@leo_bai . Entertainment</small>
+          </div>
+        </div>
+
+        <button class="button"><i class="fas fa-edit"></i>Edit</button>
+      </header>
+
+      <hr />
+
+      <main class="main">
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item"><a href="" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Jobs</a></li>
+            <li class="nav-item"><a href="" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <section class="breadcumb">
+          <p>Insights</p>
+          <input type="date" id="datePicker" />
+        </section>
+
+        <section class="tabs">
+          <div class="tab active">
+            <div class="tab-top">
+              <p>People Reached</p>
+              <span><i class="fas fa-sort-up"></i>7%</span>
+            </div>
+
+            <div class="tab-bottom">
+              <p>1,090</p>
+              <a href="#">More info <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+
+          <div class="tab">
+            <div class="tab-top">
+              <p>People Reached</p>
+              <span><i class="fas fa-sort-up"></i>25%</span>
+            </div>
+
+            <div class="tab-bottom">
+              <p>305</p>
+              <a href="#">More info <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+
+          <div class="tab">
+            <div class="tab-top">
+              <p>People Reached</p>
+              <span><i class="fas fa-sort-up"></i>18%</span>
+            </div>
+
+            <div class="tab-bottom">
+              <p>13</p>
+              <a href="#">More info <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      document.getElementById("datePicker").valueAsDate = new Date()
+    </script>
+  </body>
+</html>
