@@ -38,6 +38,10 @@
     text-decoration: none;
   }
 
+  .section {
+      padding: 10rem 0;
+  }
+
 .container {
     max-width: 114rem;
     margin: 0 auto;
@@ -80,4 +84,73 @@ margin-left: 4rem;
     background-color: var(--dark-clr);
     height: 2px;
     bottom: -1rem;
+}
+
+
+/* SECTION SEARCH */
+.section-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* FORM */
+
+/* Button */
+.button {
+    display: inline-block;
+    padding: 1.3rem 4rem;
+    font-size: 1.7rem;
+    border: 1px solid var(--dark-clr);
+    font-family: inherit;
+    border-radius: 5px;
+    background-color: var(--dark-clr);
+    color: var(--ligth-clr);
+    cursor: pointer;
+    box-shadow: var(--bs);
+}
+
+.form {
+    width: 30%;
+    max-width: 456px;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    padding: 2rem;
+    border: none;
+    border-bottom: 1px solid var(--ligth-clr);
+    outline: none;
+    transition: all .2s;
+    flex: 1;
+    font-size: 1.7rem;
+    padding-right: 4rem;
+}
+
+.form-control:focus {
+    border-bottom-color: var(--dark-clr);
+}
+
+.form-group span i {
+    color: var(--ligth-clr);
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-group span i {
+    color: var(--ligth-clr);
+    font-size: 2rem;
+}
+
+::placeholder {
+    color: var(--ligth-clr);
+    font-family: inherit;
+    font-size: 1.7rem;
 }

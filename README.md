@@ -16,3 +16,9 @@ Resources
 - Font: Open Sans (font-weight: 300, 400, 600) => [Google font](https://fonts.google.com/)
 - Icon font: [Font Awesome](https://fontawesome.com/)
 - Images: [Unsplash](https://unsplash.com/photos/RukI4qZGlQs)
+
+## domlandingage
+
+Resources:
+
+- Design prototype => [uidesigndaily.com](https://uidesigndaily.com/posts/sketch-domain-site-landing-page-website-day-1161)
