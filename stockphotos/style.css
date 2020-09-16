@@ -5,9 +5,11 @@
 
     /* Colors */
     --dark-clr:#334043;
+    --dark-opac-clr:rgba(51, 64, 67, 0.8);
     --ligth-clr: #DBE2E9;
     --line-clr: rgba(244, 244, 244, 0.125);
     --bs: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.125);
+    --bs-big: 0 2rem 3rem rgba(0, 0, 0, 0.125);
   }
   
   /* COMMON */
@@ -38,8 +40,13 @@
     text-decoration: none;
   }
 
+  img {
+      max-width: 100%;
+      /* height: 100%; */
+  }
+
   .section {
-      padding: 10rem 0;
+      padding: 5rem 0;
   }
 
 .container {
@@ -49,13 +56,16 @@
 
 /* NAV */
 
-.nav-menu {
+.nav {
     padding: 2rem;
+}
+
+.nav-menu {
     display: flex;
     justify-content: flex-end;
 }
 
-.nav-menu .nav-item + .nav-item {
+.nav-item + .nav-item {
 margin-left: 4rem;
 }
 
@@ -96,7 +106,7 @@ margin-left: 4rem;
 
 /* FORM */
 
-/* Button */
+/* BUTTON */
 .button {
     display: inline-block;
     padding: 1.3rem 4rem;
@@ -104,12 +114,22 @@ margin-left: 4rem;
     border: 1px solid var(--dark-clr);
     font-family: inherit;
     border-radius: 5px;
-    background-color: var(--dark-clr);
-    color: var(--ligth-clr);
     cursor: pointer;
     box-shadow: var(--bs);
+    transition: all .2s;
 }
 
+.button:hover {
+    transform: translateY(-4px);
+}
+
+.button-dark {
+    background-color: var(--dark-clr);
+    color: var(--ligth-clr);
+    box-shadow: var(--bs-big);
+}
+
+/* FORMULAIRE */
 .form {
     width: 30%;
     max-width: 456px;
@@ -154,3 +174,57 @@ margin-left: 4rem;
     font-family: inherit;
     font-size: 1.7rem;
 }
+
+/* SECTION IMAGE */
+.section-image {
+    /* display: flex;
+    flex-wrap: wrap; */
+    
+}
+
+.image-block {
+    width: calc(100% / 3 - 1.5rem) ;
+    float: left;
+    margin-bottom: 2rem;
+    position: relative;
+    transition: all .2s;
+}
+
+.image-block:nth-child(2) {
+    margin: 0 2rem 0rem 2rem;
+}
+
+.image-block:nth-child(5) {
+    margin: 0rem 2rem 0rem 2rem;
+}
+
+.image-block-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--ligth-clr);
+    background: var(--dark-opac-clr);
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 0;
+    bottom: .75rem;
+    overflow: hidden;
+    transform: translateY(50%);
+    width: 100%;
+    transition: transform .2s;
+    opacity: 0;
+}
+
+.image-block:hover .image-block-content{
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.image-block-content span {
+    font-size: 1.3rem;
+}
+
+.like {
+    margin-right: 1rem;
+}
+
